@@ -2,7 +2,7 @@
 <html lang="en" id="top">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="PB3 Productions - We Shoot Cool Shit. Cinematic content for brands, artists, and people who don’t want boring." />
   <title>PB3 Productions | We Shoot Cool Shit</title>
   <meta name="theme-color" content="#050505" />
@@ -16,148 +16,119 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script defer src="script.js"></script>
 </head>
-
 <body>
   <div class="grain" aria-hidden="true"></div>
   <div class="scanlines" aria-hidden="true"></div>
 
   <audio id="backgroundAudio" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/rave-instrumental-1-375689.mp3" loop preload="auto"></audio>
 
-  <header class="topbar" id="siteHeader">
-    <a class="brand" href="#top" aria-label="PB3 Productions Home">
-      <img src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PRODUCTIONS1.svg" alt="PB3 Productions Logo" class="nav-brand-logo" />
-    </a>
+  <div class="loader" aria-hidden="true">
+    <div class="loader__mask">
+      <img src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PRODUCTIONS1.svg" alt="" />
+    </div>
+  </div>
 
-    <button class="mobileMenuBtn" type="button" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span>
-    </button>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+    <span>MENU</span>
+  </button>
 
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#work" class="navLink">Work</a>
-      <a href="#services" class="navLink">Services</a>
-      <a href="#about" class="navLink">About</a>
-      <a href="#contact" class="navLink">Contact</a>
-      <div class="navCtaGroup">
-        <a href="tel:+15551234567" class="btn contact-btn" aria-label="Call PB3 Productions">
-          <svg class="btn-contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-          </svg>
-          <span>Call</span>
-        </a>
-        <a href="mailto:hello@pb3productions.com" class="btn contact-btn" aria-label="Email PB3 Productions">
-          <svg class="btn-contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-          </svg>
-          <span>Email</span>
-        </a>
+  <aside class="mega-menu" aria-hidden="true">
+    <button class="menu-close" type="button" aria-label="Close menu">CLOSE</button>
+    <div class="mega-menu__rule"></div>
+
+    <div class="mega-menu__panel mega-menu__panel--left">
+      <div class="kicker">PB3 / LAS VEGAS</div>
+      <nav class="menu-links" aria-label="Main menu">
+        <a href="#top"><span>Home</span><b>N°1</b></a>
+        <a href="#work"><span>Work Reel</span><b>N°2</b></a>
+        <a href="#services"><span>Services</span><b>N°3</b></a>
+        <a href="#about"><span>About</span><b>N°4</b></a>
+        <a href="#contact"><span>Contact</span><b>N°5</b></a>
+      </nav>
+      <p class="menu-credit">Production + Post<br /><em>WE SHOOT COOL SHIT</em></p>
+    </div>
+
+    <div class="mega-menu__panel mega-menu__panel--right">
+      <div class="menu-card-track" aria-label="PB3 service cards">
+        <a class="menu-card" href="#work"><small>N°1</small><strong>Watch<br />Work</strong><span>Motion Reel</span></a>
+        <a class="menu-card" href="#services"><small>N°2</small><strong>Commercial<br />Fashion</strong><span>Concept • Shoot • Post</span></a>
+        <a class="menu-card" href="#services"><small>N°3</small><strong>Music<br />Doc</strong><span>Videos • Stories</span></a>
+        <a class="menu-card" href="#about"><small>N°4</small><strong>Built<br />Lean</strong><span>Taste • Timing • Trust</span></a>
+        <a class="menu-card" href="#contact"><small>N°5</small><strong>Book<br />Shoot</strong><span>Start The Vision</span></a>
       </div>
+      <div class="drag-note">← drag / scroll →</div>
+    </div>
+  </aside>
+
+  <header class="site-header" id="site-header">
+    <nav aria-label="Primary navigation">
+      <a href="#top">HOME</a>
+      <a href="#services">WORK STRUCTURE</a>
+      <a href="#work">WORKS</a>
+      <a href="#showcase">SHOWCASE</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" aria-label="PB3 Hero">
-      <div class="heroBg" aria-hidden="true">
-        <video class="heroVid" autoplay muted loop playsinline preload="metadata" poster="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Untitled-design36.png">
-          <source src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Productions3.mp4" type="video/mp4" />
-        </video>
-        <div class="heroVignette"></div>
+    <section class="hero section-shell" aria-label="PB3 hero">
+      <div class="hero__grid">
+        <a class="hero__reel" href="#work" aria-label="View PB3 work reel">
+          <video class="heroVid" autoplay muted loop playsinline preload="metadata" poster="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Untitled-design36.png">
+            <source src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Productions3.mp4" type="video/mp4" />
+          </video>
+          <span>PLAY<br />SHOWREEL</span>
+        </a>
+
+        <div class="hero__work-list" aria-label="PB3 production categories">
+          <div class="mini-title"><span>Selected</span><b>WORKØ</b></div>
+          <a href="#services"><span>Commercial</span><b>01</b></a>
+          <a href="#services"><span>Fashion</span><b>02</b></a>
+          <a href="#services"><span>Music</span><b>03</b></a>
+          <a href="#services"><span>Documentary</span><b>04</b></a>
+          <a href="#services"><span>Narrative / Post</span><b>05</b></a>
+        </div>
+
+        <div class="hero__statement">
+          <h1>
+            <img class="heroLogo" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PRODUCTIONS1.svg" alt="PB3 Productions" />
+            <span class="heroTitleTag">WE SHOOT COOL SH<img class="turd-i" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Untitled-design15.svg" alt="I" />T</span>
+          </h1>
+          <p>Cinematic content for brands, artists, and people who don’t want boring. Small crews. Big taste. Clean execution.</p>
+        </div>
+
+        <button class="hero__cta sound-toggle" id="soundToggle" type="button" aria-pressed="false" title="Toggle sound">
+          <span class="sound-mark">↗</span>
+          <small class="iconText">Sound: Off</small>
+        </button>
       </div>
-      <div class="scrollHint" aria-hidden="true">
-        <span>Scroll</span>
-        <div class="scrollLine"></div>
+      <span class="scroll-text">SCROLL <em>↓</em></span>
+    </section>
+
+    <section class="intro section-shell reveal" id="showcase">
+      <div class="section-title">
+        <p>PB3 Productions / Production + Post</p>
+        <h2>A living film frame.</h2>
+      </div>
+      <div class="intro__body">
+        <p>PB3 exists for the people who want their content to look like it belongs in a theater, not a template.</p>
+        <a href="#contact">Book a Shoot ↗</a>
       </div>
     </section>
 
-    <section id="hero-content-reveal" class="section hero-content-reveal">
-      <div class="wrap">
-        <div class="heroKicker hero-reveal-item">Production + Post</div>
-
-        <h1 class="heroTitle hero-reveal-item">
-          <img src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PRODUCTIONS1.svg" alt="PB3 Productions Logo" class="heroLogo" />
-          <span class="heroTitleTag">WE SHOOT COOL SH<img class="turd-i" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Untitled-design15.svg" alt="I" />T</span>
-        </h1>
-
-        <p class="heroSub hero-reveal-item">
-          Cinematic content for brands, artists, and people who don’t want boring.
-          Small crews. Big taste. Clean execution.
-        </p>
-
-        <div class="heroActions hero-reveal-item">
-          <a href="#work" class="btn primary">Watch Work</a>
-          <a href="#contact" class="btn ghost">Book a Shoot</a>
-          <button class="btn icon" id="soundToggle" type="button" aria-pressed="false" title="Toggle sound">
-            <span class="iconDot"></span>
-            <span class="iconText">Sound: Off</span>
-          </button>
-        </div>
-
-        <div class="heroMeta hero-reveal-item" aria-label="Production categories">
-          <div class="metaPill">Commercial</div>
-          <div class="metaPill">Fashion</div>
-          <div class="metaPill">Music</div>
-          <div class="metaPill">Documentary</div>
-          <div class="metaPill">Narrative</div>
-        </div>
+    <section class="statement-band reveal" aria-label="PB3 statement marquee">
+      <div class="marqueeTrack">
+        <span>SHOOT WITH INTENT</span><span>•</span><span>EDIT WITH RHYTHM</span><span>•</span><span>COLOR WITH TASTE</span><span>•</span><span>NO STOCK VIBE</span><span>•</span>
+        <span>SHOOT WITH INTENT</span><span>•</span><span>EDIT WITH RHYTHM</span><span>•</span><span>COLOR WITH TASTE</span><span>•</span><span>NO STOCK VIBE</span><span>•</span>
       </div>
     </section>
 
-    <section class="section statement">
-      <div class="wrap">
-        <div class="sectionHead">
-          <div class="eyebrow">Statement</div>
-          <h2 class="h2">A living film frame.</h2>
-        </div>
-
-        <div class="statementGrid">
-          <p class="lede">
-            PB3 exists for the people who want their content to look like it belongs in a theater,
-            not a template.
-          </p>
-
-          <div class="quoteCard">
-            <div class="quoteMark">“</div>
-            <p class="quoteText">
-              Real cameras. Real lighting. Real direction.
-              No filler. No stock vibe. No pretending.
-            </p>
-            <div class="quoteCred">
-              <span class="mono">PB3 /</span> <span class="mono">Las Vegas</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="interrupt" aria-label="PB3 Marquee">
-      <div class="marquee">
-        <div class="marqueeTrack">
-          <span>SHOOT WITH INTENT</span>
-          <span>•</span>
-          <span>EDIT WITH RHYTHM</span>
-          <span>•</span>
-          <span>COLOR WITH TASTE</span>
-          <span>•</span>
-          <span>SHOOT WITH INTENT</span>
-          <span>•</span>
-          <span>EDIT WITH RHYTHM</span>
-          <span>•</span>
-          <span>COLOR WITH TASTE</span>
-          <span>•</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="section work">
-      <div class="wrap">
-        <div class="sectionHead">
-          <div class="eyebrow">Work</div>
-          <h2 class="h2">Proof lives here.</h2>
-          <p class="sub">A horizontal reel system built around motion, pressure, and impact.</p>
-        </div>
+    <section class="video-gallery section-shell reveal" id="work">
+      <div class="section-heading-row">
+        <h2>Proof lives here.</h2>
+        <p>Reel clips pulled into a CREVIXA-style work archive.</p>
       </div>
 
-      <div class="reel" aria-label="PB3 Work Reel">
+      <div class="reel-wrap" aria-label="PB3 Work Reel">
         <div class="reelBgText" aria-hidden="true">
           <span>WE</span>
           <span>SHOOT</span>
@@ -165,248 +136,128 @@
           <span>SHIT</span>
         </div>
 
-        <div class="reelInner" id="reelInner">
-          <article class="reelCard" tabindex="0" data-reveal-text="WE">
-            <div class="reelStage">
-              <div class="reelMedia">
-                <video class="cardVid" autoplay loop muted playsinline preload="metadata">
-                  <source src="https://i.imgur.com/Ap8pNcl.mp4" type="video/mp4" />
-                </video>
-                <div class="reelOverlay">
-                  <div class="reelRevealText">WE</div>
-                  <div class="reelTitle">BRAND / RUN SERIES</div>
-                  <div class="reelMeta mono">Director • DP • Edit • 2025</div>
-                </div>
-              </div>
-            </div>
+        <div class="gallery-grid reelInner" id="reelInner">
+          <article class="project-card reelCard" tabindex="0">
+            <video autoplay loop muted playsinline preload="metadata"><source src="https://i.imgur.com/Ap8pNcl.mp4" type="video/mp4" /></video>
+            <span>Brand / Run Series</span>
+            <small class="mono">Director • DP • Edit • 2025</small>
           </article>
-
-          <article class="reelCard" tabindex="0" data-reveal-text="SHOOT">
-            <div class="reelStage">
-              <div class="reelMedia">
-                <video class="cardVid" autoplay loop muted playsinline preload="metadata">
-                  <source src="https://i.imgur.com/yloxb75.mp4" type="video/mp4" />
-                </video>
-                <div class="reelOverlay">
-                  <div class="reelRevealText">SHOOT</div>
-                  <div class="reelTitle">FASHION / NIGHT CUTS</div>
-                  <div class="reelMeta mono">DP • Color • 2025</div>
-                </div>
-              </div>
-            </div>
+          <article class="project-card reelCard" tabindex="0">
+            <video autoplay loop muted playsinline preload="metadata"><source src="https://i.imgur.com/yloxb75.mp4" type="video/mp4" /></video>
+            <span>Fashion / Night Cuts</span>
+            <small class="mono">DP • Color • 2025</small>
           </article>
-
-          <article class="reelCard" tabindex="0" data-reveal-text="COOL">
-            <div class="reelStage">
-              <div class="reelMedia">
-                <video class="cardVid" autoplay loop muted playsinline preload="metadata">
-                  <source src="https://i.imgur.com/Zk7xv85.mp4" type="video/mp4" />
-                </video>
-                <div class="reelOverlay">
-                  <div class="reelRevealText">COOL</div>
-                  <div class="reelTitle">MUSIC / LIVE SESSION</div>
-                  <div class="reelMeta mono">Director • Edit • 2024</div>
-                </div>
-              </div>
-            </div>
+          <article class="project-card reelCard" tabindex="0">
+            <video autoplay loop muted playsinline preload="metadata"><source src="https://i.imgur.com/Zk7xv85.mp4" type="video/mp4" /></video>
+            <span>Music / Live Session</span>
+            <small class="mono">Director • Edit • 2024</small>
           </article>
-
-          <article class="reelCard" tabindex="0" data-reveal-text="SHIT">
-            <div class="reelStage">
-              <div class="reelMedia">
-                <video class="cardVid" autoplay loop muted playsinline preload="metadata">
-                  <source src="https://i.imgur.com/j7xXmCo.mp4" type="video/mp4" />
-                </video>
-                <div class="reelOverlay">
-                  <div class="reelRevealText">SHIT</div>
-                  <div class="reelTitle">DOC / STREET STORIES</div>
-                  <div class="reelMeta mono">Director • DP • 2024</div>
-                </div>
-              </div>
-            </div>
+          <article class="project-card reelCard" tabindex="0">
+            <video autoplay loop muted playsinline preload="metadata"><source src="https://i.imgur.com/j7xXmCo.mp4" type="video/mp4" /></video>
+            <span>Doc / Street Stories</span>
+            <small class="mono">Director • DP • 2024</small>
           </article>
-
-          <article class="reelCard" tabindex="0" data-reveal-text="IMPACT">
-            <div class="reelStage">
-              <div class="reelMedia">
-                <video class="cardVid" autoplay loop muted playsinline preload="metadata">
-                  <source src="https://i.imgur.com/XxEqYCf.mp4" type="video/mp4" />
-                </video>
-                <div class="reelOverlay">
-                  <div class="reelRevealText">IMPACT</div>
-                  <div class="reelTitle">SPOT / NEON NARRATIVE</div>
-                  <div class="reelMeta mono">Director • Color • 2025</div>
-                </div>
-              </div>
-            </div>
+          <article class="project-card reelCard" tabindex="0">
+            <video autoplay loop muted playsinline preload="metadata"><source src="https://i.imgur.com/XxEqYCf.mp4" type="video/mp4" /></video>
+            <span>Spot / Neon Narrative</span>
+            <small class="mono">Director • Color • 2025</small>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section services">
-      <div class="wrap">
-        <div class="sectionHead">
-          <div class="eyebrow">Services</div>
-          <h2 class="h2">No fluff. Just firepower.</h2>
-          <p class="sub">Hover each tile. You’ll see what we mean.</p>
-        </div>
+    <section class="showreel section-shell reveal">
+      <a class="showreel__media" href="#work" aria-label="Watch PB3 work reel">
+        <video autoplay muted loop playsinline preload="metadata" poster="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Untitled-design36.png">
+          <source src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Productions3.mp4" type="video/mp4" />
+        </video>
+        <span>Watch Work ↗</span>
+      </a>
+    </section>
 
-        <div class="serviceGrid">
-          <button class="serviceTile" type="button" data-service="Commercial">
-            <span class="serviceBig">Commercial</span>
-            <span class="serviceSmall mono">Concept • Shoot • Post</span>
-          </button>
+    <section class="brand-section section-shell reveal" id="services">
+      <div class="section-heading-row">
+        <h2>No fluff. Just firepower.</h2>
+        <p>Commercial, fashion, music, documentary, narrative, and post-production.</p>
+      </div>
 
-          <button class="serviceTile" type="button" data-service="Fashion">
-            <span class="serviceBig">Fashion</span>
-            <span class="serviceSmall mono">Editorial • Runway • Lookbooks</span>
-          </button>
-
-          <button class="serviceTile" type="button" data-service="Music">
-            <span class="serviceBig">Music</span>
-            <span class="serviceSmall mono">Videos • Sessions • Promos</span>
-          </button>
-
-          <button class="serviceTile" type="button" data-service="Documentary">
-            <span class="serviceBig">Documentary</span>
-            <span class="serviceSmall mono">Story • Truth • Texture</span>
-          </button>
-
-          <button class="serviceTile" type="button" data-service="Narrative">
-            <span class="serviceBig">Narrative</span>
-            <span class="serviceSmall mono">Shorts • Branded films</span>
-          </button>
-
-          <button class="serviceTile" type="button" data-service="Post">
-            <span class="serviceBig">Post</span>
-            <span class="serviceSmall mono">Edit • Color • Sound</span>
-          </button>
-        </div>
-
-        <div class="servicePreview" aria-hidden="true">
-          <div class="servicePreviewInner">
-            <div class="previewLabel mono" id="previewLabel">Hover a service</div>
-            <div class="previewPulse"></div>
-          </div>
-        </div>
+      <div class="serviceGrid">
+        <button class="serviceTile" type="button" data-service="Commercial"><span>Commercial</span><small>Concept • Shoot • Post</small></button>
+        <button class="serviceTile" type="button" data-service="Fashion"><span>Fashion</span><small>Editorial • Runway • Lookbooks</small></button>
+        <button class="serviceTile" type="button" data-service="Music"><span>Music</span><small>Videos • Sessions • Promos</small></button>
+        <button class="serviceTile" type="button" data-service="Documentary"><span>Documentary</span><small>Story • Truth • Texture</small></button>
+        <button class="serviceTile" type="button" data-service="Narrative"><span>Narrative</span><small>Shorts • Branded films</small></button>
+        <button class="serviceTile" type="button" data-service="Post"><span>Post</span><small>Edit • Color • Sound</small></button>
       </div>
     </section>
 
-    <section id="about" class="section about">
-      <div class="wrap">
-        <div class="sectionHead">
-          <div class="eyebrow">About</div>
-          <h2 class="h2">Built around taste, timing, trust.</h2>
+    <section class="split-section section-shell reveal" id="about">
+      <div>
+        <p class="eyebrow">About / Direction First</p>
+        <h2>Built around taste, timing, trust.</h2>
+        <p>PB3 is a production company engineered for speed and quality. We run lean crews, obsess over lighting, and keep the edit tight.</p>
+        <div class="aboutCaps mono">
+          <span>Canon C70</span><span>35mm</span><span>Natural Light</span><span>Vegas Nights</span>
         </div>
+      </div>
+      <figure class="portrait-card">
+        <img src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PB3-Camera-with-logo.png" alt="PB3 Camera with logo" loading="lazy" />
+        <figcaption class="mono">Real cameras. Real lighting. Real direction.</figcaption>
+      </figure>
+    </section>
 
-        <div class="aboutGrid">
-          <div class="aboutCard">
-            <p class="lede">
-              PB3 is a production company engineered for speed and quality.
-              We run lean crews, obsess over lighting, and keep the edit tight.
-            </p>
-
-            <ul class="aboutList mono">
-              <li><span class="dot"></span> Fast turnarounds when it matters</li>
-              <li><span class="dot"></span> Cinema-grade look without the chaos</li>
-              <li><span class="dot"></span> Direction-first storytelling</li>
-              <li><span class="dot"></span> Color that feels expensive</li>
-            </ul>
-
-            <div class="aboutCaps mono">
-              <span>Canon C70</span>
-              <span>35mm</span>
-              <span>Natural Light</span>
-              <span>Vegas Nights</span>
-            </div>
-          </div>
-
-          <figure class="portrait">
-            <img src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PB3-Camera-with-logo.png" alt="PB3 Camera with logo" loading="lazy" />
-            <figcaption class="mono">
-              Replace with your photo or a behind-the-scenes still.
-            </figcaption>
-          </figure>
-        </div>
+    <section class="split-section split-section--reverse section-shell reveal">
+      <div class="quote-orb">
+        <p>“</p>
+      </div>
+      <div>
+        <p class="eyebrow">Production Philosophy</p>
+        <h2>No filler. No stock vibe. No pretending.</h2>
+        <p>Fast turnarounds when it matters. Cinema-grade look without the chaos. Direction-first storytelling. Color that feels expensive.</p>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="wrap">
-        <div class="contactCard">
-          <div class="contactLeft">
-            <div class="eyebrow">Contact</div>
-            <h2 class="h2">Let’s make something worth watching.</h2>
-            <p class="sub">
-              Email is the fastest. If you have a rough idea, that’s enough.
-              We’ll pull it into shape.
-            </p>
-
-            <div class="contactLinks">
-              <a class="contactLink" href="mailto:hello@pb3productions.com">hello@pb3productions.com</a>
-              <div class="contactRow mono">
-                <a href="#" class="iconLink" aria-label="Instagram">IG</a>
-                <a href="#" class="iconLink" aria-label="Vimeo">Vimeo</a>
-                <a href="#" class="iconLink" aria-label="YouTube">YT</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="contactRight">
-            <form class="pb3-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-              <div class="form-row">
-                <div class="input-group">
-                  <input class="mono input-field" type="text" name="name" placeholder="Name" required />
-                </div>
-                <div class="input-group">
-                  <input class="mono input-field" type="email" name="email" placeholder="Email" required />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="input-group full">
-                  <select class="mono input-field select-field" name="service">
-                    <option value="" disabled selected>Project Type</option>
-                    <option value="Commercial">Commercial / Ad</option>
-                    <option value="Music Video">Music Video</option>
-                    <option value="Fashion">Fashion / Editorial</option>
-                    <option value="Documentary">Documentary</option>
-                    <option value="Narrative">Narrative / Film</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  <div class="select-arrow">↓</div>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="input-group full">
-                  <textarea class="mono input-field area-field" name="message" rows="4" placeholder="Tell us the vision, timeline, or rough budget..." required></textarea>
-                </div>
-              </div>
-
-              <button type="submit" class="btn primary wide form-submit-btn">
-                <span>Send Request</span>
-                <span class="mono">→</span>
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <footer class="footer mono">
-          <div class="turdGroup">
-            <div class="comicBubble">We Shoot Cool Shit!</div>
-            <img class="turd goldTurd" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Group-of-gold-turds2.svg" alt="Group of gold turds" aria-hidden="true" />
-          </div>
-          <div class="footer-content-inner">
-            <span>© <span id="year"></span> PB3 Productions</span>
-            <span class="footerSep">•</span>
-            <a href="#top" class="toTop">Back to top</a>
-          </div>
-        </footer>
+    <section class="contact section-shell reveal" id="contact">
+      <div class="contact__panel">
+        <h2>Let’s make something worth watching.</h2>
+        <p>Email is the fastest. If you have a rough idea, that’s enough. We’ll pull it into shape.</p>
+        <a href="mailto:hello@pb3productions.com">hello@pb3productions.com ↗</a>
       </div>
+
+      <form class="contact__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input class="mono" type="text" name="name" placeholder="Name" required />
+        <input class="mono" type="email" name="email" placeholder="Email" required />
+        <select class="mono" name="service">
+          <option value="" disabled selected>Project Type</option>
+          <option value="Commercial">Commercial / Ad</option>
+          <option value="Music Video">Music Video</option>
+          <option value="Fashion">Fashion / Editorial</option>
+          <option value="Documentary">Documentary</option>
+          <option value="Narrative">Narrative / Film</option>
+          <option value="Other">Other</option>
+        </select>
+        <textarea class="mono" name="message" rows="5" placeholder="Tell us the vision, timeline, or rough budget..." required></textarea>
+        <button class="form-submit" type="submit"><span>Send Request</span><span>→</span></button>
+      </form>
     </section>
   </main>
+
+  <footer class="site-footer mono">
+    <div>
+      <img class="footer-logo" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PRODUCTIONS1.svg" alt="PB3 Productions" />
+      <span>© <span id="year"></span> PB3 Productions</span>
+    </div>
+    <div class="turdGroup" aria-hidden="true">
+      <div class="comicBubble">We Shoot Cool Shit!</div>
+      <img class="goldTurd" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Group-of-gold-turds2.svg" alt="" />
+    </div>
+    <nav aria-label="Social links">
+      <a href="#">IG ↗</a>
+      <a href="#">Vimeo ↗</a>
+      <a href="#">YT ↗</a>
+      <a href="#top">Back to top ↑</a>
+    </nav>
+  </footer>
 
   <div class="tooltip" id="tooltip" role="status" aria-live="polite" aria-hidden="true">
     <div class="tooltipInner">
