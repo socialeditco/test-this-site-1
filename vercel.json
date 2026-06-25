@@ -1,0 +1,19 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/musicvideos", "destination": "/index.html" },
+    { "source": "/brandcontent", "destination": "/index.html" },
+    { "source": "/photo", "destination": "/index.html" },
+    { "source": "/graphics", "destination": "/index.html" },
+    { "source": "/workstructure", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ]
+}
