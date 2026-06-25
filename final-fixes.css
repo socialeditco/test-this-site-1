@@ -1,0 +1,174 @@
+/* Final PB3 layout fixes: hero overlap, switch volume control, reel text stacking, blank-space reduction. */
+
+/* Light-switch volume control replaces the oversized arrow/circle. */
+.hero__cta.sound-toggle {
+  grid-column: 1 / 2 !important;
+  grid-row: 2 / 3 !important;
+  justify-self: end !important;
+  align-self: end !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  transform: none !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--cream) !important;
+  display: inline-grid !important;
+  grid-template-columns: auto auto !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 0 0 4px !important;
+  z-index: 5;
+}
+.hero__cta.sound-toggle:hover,
+.hero__cta.sound-toggle[aria-pressed="true"] {
+  background: transparent !important;
+  color: var(--cream) !important;
+}
+.hero__cta .sound-mark {
+  position: relative !important;
+  display: inline-block !important;
+  width: 58px !important;
+  height: 28px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.06) !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  box-shadow: inset 0 0 18px rgba(0,0,0,.7);
+  transition: border-color .25s var(--ease), background .25s var(--ease), box-shadow .25s var(--ease);
+}
+.hero__cta .sound-mark::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: var(--muted);
+  box-shadow: 0 0 0 rgba(246,216,92,0);
+  transition: left .28s var(--ease), background .28s var(--ease), box-shadow .28s var(--ease);
+}
+.hero__cta[aria-pressed="true"] .sound-mark {
+  border-color: var(--gold-bright) !important;
+  background: rgba(246,216,92,.16) !important;
+  box-shadow: inset 0 0 18px rgba(246,216,92,.12), 0 0 24px rgba(246,216,92,.16);
+}
+.hero__cta[aria-pressed="true"] .sound-mark::after {
+  left: 32px;
+  background: var(--gold-bright);
+  box-shadow: 0 0 18px rgba(246,216,92,.65);
+}
+.hero__cta .iconText {
+  color: var(--gold-bright);
+  font-size: .68rem;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+/* Hero overlap cleanup. */
+.hero__statement {
+  padding-right: clamp(76px, 10vw, 150px) !important;
+  position: relative;
+}
+.hero__statement p {
+  max-width: 330px !important;
+}
+.heroLogo {
+  width: min(260px, 21vw) !important;
+}
+.heroTitleTag {
+  font-size: clamp(2.35rem, 4.15vw, 5.7rem) !important;
+}
+
+/* Prevent the reel background words from stacking on top of each other. */
+.reelBgText {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: clamp(.06em, 1vw, .14em) !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+.reelBgText span {
+  position: static !important;
+  visibility: visible !important;
+  opacity: .075 !important;
+  transform: none !important;
+  font-size: clamp(4.5rem, 13vw, 17rem) !important;
+  letter-spacing: -.09em !important;
+}
+
+/* Pull the next sections up now that the pinned duplicate reel behavior is removed. */
+.video-gallery {
+  padding-bottom: clamp(16px, 2.5vw, 42px) !important;
+}
+.reel-wrap {
+  min-height: 0 !important;
+  padding-bottom: clamp(14px, 2vw, 26px) !important;
+}
+.motion-section,
+.still-section {
+  padding-top: clamp(26px, 4vw, 64px) !important;
+}
+.motion-section {
+  margin-top: 0 !important;
+}
+.gallery-grid {
+  padding-bottom: 8px !important;
+}
+.project-card {
+  flex: 0 0 min(52vw, 390px) !important;
+}
+.project-card video {
+  aspect-ratio: 1.8 / 1 !important;
+}
+
+/* Keep the horizontal player controlled and not oversized. */
+.showreel__media.horizontal-player {
+  width: min(720px, 78vw) !important;
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 44px !important;
+}
+
+/* Keep desktop hero aligned after removing the oversized volume circle. */
+@media (min-width: 1101px) {
+  .hero__grid {
+    grid-template-columns: minmax(520px, .98fr) minmax(390px, .62fr) !important;
+    column-gap: clamp(46px, 7vw, 110px) !important;
+  }
+  .hero__reel {
+    width: min(100%, 765px) !important;
+  }
+  .hero__work-list {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero__statement {
+    padding-right: 0 !important;
+  }
+  .hero__cta.sound-toggle {
+    justify-self: start !important;
+    margin-top: 8px;
+  }
+  .heroLogo {
+    width: min(330px, 70vw) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .heroTitleTag {
+    font-size: clamp(3.7rem, 20vw, 6.7rem) !important;
+  }
+  .project-card {
+    flex: initial !important;
+  }
+  .reelBgText span {
+    font-size: clamp(3.4rem, 20vw, 7rem) !important;
+  }
+}
