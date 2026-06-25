@@ -1,4 +1,9 @@
 (() => {
+  const finalFixes = document.createElement('link');
+  finalFixes.rel = 'stylesheet';
+  finalFixes.href = 'final-fixes.css';
+  document.head.appendChild(finalFixes);
+
   document.querySelectorAll('.project-card, .motion-card, .still-card').forEach((card) => {
     card.addEventListener('click', () => {
       const parent = card.parentElement;
