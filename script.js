@@ -124,15 +124,14 @@
 
   window.addEventListener('load', () => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const small = window.matchMedia('(max-width: 720px)').matches;
-    if (reduce || small || !window.gsap || !window.ScrollTrigger) return;
+    if (reduce || !window.gsap || !window.ScrollTrigger) return;
 
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.config({ ignoreMobileResize: true });
 
     gsap.to('.heroVid', {
-      scale: 1.08,
-      yPercent: 6,
+      scale: 1.04,
+      yPercent: 3,
       ease: 'none',
       scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
     });
@@ -142,27 +141,5 @@
       ease: 'none',
       scrollTrigger: { trigger: '.statement-band', start: 'top bottom', end: 'bottom top', scrub: true }
     });
-
-    const reelWrap = document.querySelector('.reel-wrap');
-    const reelInner = document.getElementById('reelInner');
-    if (reelWrap && reelInner && reelInner.scrollWidth > reelWrap.clientWidth) {
-      const amount = () => Math.max(0, reelInner.scrollWidth - reelWrap.clientWidth);
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.reel-wrap',
-          start: 'center center',
-          end: () => '+=' + amount(),
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true
-        }
-      });
-      tl.to(reelInner, { x: () => -amount(), ease: 'none' }, 0);
-      gsap.set('.reelBgText span', { autoAlpha: 0, y: 50, scale: 0.9 });
-      gsap.utils.toArray('.reelBgText span').forEach((span, index) => {
-        tl.to(span, { autoAlpha: 0.25, y: 0, scale: 1, duration: 0.5, ease: 'power2.out' }, index * 0.15);
-      });
-    }
   });
 })();
